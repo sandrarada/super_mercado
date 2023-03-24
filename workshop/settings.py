@@ -73,6 +73,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'workshop.wsgi.application'
+AUTH_USER_MODEL='appUsuarios.Usuario'
 
 
 # Database
