@@ -1,0 +1,26 @@
+{% extends 'base.html' %}<!--para indicar que esta plantilla se inserta en base html-->
+{% block content %} <!--que lo que esta por dentro debe de renderizarse en base html-->
+<br>
+
+<div class="mb-3 descripcion text-center">
+    <h4>{{titulo}}</h4>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <th>Descripción Categoria</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {% for cat in categorias %}
+            <tr>
+                <td>{{cat.descripCategoria}}</td>
+                <td><a href="{% url 'productos' cat.id %}" type="button" class="btn btn-info">ListarProductos</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
